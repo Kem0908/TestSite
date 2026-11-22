@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>トレランクラブ【走ったれ】 | Hashittare Trail Running Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            display: ['"Oswald"', 'sans-serif'],
+          },
+          colors: {
+            forest: {
+              50: '#f2f7f4',
+              100: '#e0ece4',
+              600: '#2d6a4f',
+              800: '#1b4332',
+              900: '#081c15',
+            },
+            ochre: {
+              500: '#d97706',
+              600: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(to bottom, rgba(8, 28, 21, 0.45), rgba(8, 28, 21, 0.85)),
+        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-forest-600 selection:text-white">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-40 bg-forest-900/90 backdrop-blur-md text-white border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-baseline gap-2.5 group">
+        <span class="text-xl font-black tracking-wider text-white group-hover:text-amber-400 transition">走ったれ</span>
+        <span class="hidden sm:inline text-xs font-display tracking-widest text-stone-300 uppercase">Hashittare Trail Running Club</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-amber-400 transition">走ったれとは</a>
+        <a href="#schedule" class="hover:text-amber-400 transition">活動予定</a>
+        <a href="#reports" class="hover:text-amber-400 transition">活動報告</a>
+        <a href="#fields" class="hover:text-amber-400 transition">フィールド</a>
+        <a href="#members" class="hover:text-amber-400 transition">メンバー</a>
+        <a href="#gear" class="hover:text-amber-400 transition">装備</a>
+        <a href="#join" class="px-4 py-2 rounded-full bg-amber-500 hover:bg-amber-400 text-forest-900 font-bold transition">体験参加</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg text-stone-200 hover:bg-white/10" aria-label="メニューを開く">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden md:hidden bg-forest-900 border-t border-white/10 px-4 py-4 space-y-3 text-sm">
+      <a href="#about" class="block py-1.5 hover:text-amber-400">走ったれとは</a>
+      <a href="#schedule" class="block py-1.5 hover:text-amber-400">活動予定</a>
+      <a href="#reports" class="block py-1.5 hover:text-amber-400">活動報告</a>
+      <a href="#fields" class="block py-1.5 hover:text-amber-400">フィールド</a>
+      <a href="#members" class="block py-1.5 hover:text-amber-400">メンバー</a>
+      <a href="#gear" class="block py-1.5 hover:text-amber-400">装備</a>
+      <a href="#join" class="block py-2 text-center rounded-lg bg-amber-500 text-forest-900 font-bold">体験参加してみる</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero-bg min-h-screen flex items-center pt-16 text-white relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 w-full">
+      <div class="flex flex-wrap items-center gap-3 text-xs font-display tracking-widest uppercase text-amber-400 mb-4">
+        <span class="px-2.5 py-1 bg-white/10 rounded">SHINSHU / NAGANO</span>
+        <span>TRAIL RUNNING CLUB — EST. 2021</span>
+      </div>
+      <p class="font-display text-lg sm:text-xl tracking-wider text-stone-200 mb-2">Run the mountains, together.</p>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6">
+        信州の山を、<br />仲間と走ったれ！
+      </h1>
+      <p class="max-w-2xl text-base sm:text-lg text-stone-200 leading-relaxed mb-10">
+        北アルプスの稜線から長野市の里山、朝6時の犀川河川敷まで。<br class="hidden sm:inline" />
+        絶景とトレイルグルメ、レース完走まで、和気あいあいと楽しむトレイルランニングクラブです。
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#join" class="px-7 py-3.5 rounded-full bg-amber-500 hover:bg-amber-400 text-forest-900 font-bold text-base shadow-lg transition">
+          体験参加してみる →
+        </a>
+        <a href="#schedule" class="px-7 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/30 text-white font-bold text-base transition">
+          活動予定を見る
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-6 inset-x-0 max-w-6xl mx-auto px-4 sm:px-6 flex justify-between text-xs text-stone-300 font-display tracking-widest">
+      <span>↓ SCROLL</span>
+      <span>SHINSHU MOUNTAIN TRAILS</span>
+    </div>
+  </section>
+
+  <!-- No.01 About -->
+  <section id="about" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5">
+          <p class="font-display text-sm tracking-widest text-forest-600 uppercase mb-2">No.01 — About Hashittare</p>
+          <h2 class="text-3xl sm:text-4xl font-black text-forest-900 leading-snug">
+            初心者からレース完走志向まで、<br />信州の山を遊び尽くす。
+          </h2>
+        </div>
+        <div class="lg:col-span-7 space-y-4 text-stone-600 leading-relaxed">
+          <p>
+            「トレランクラブ【走ったれ】」は、長野県北信・中信・東信エリアや北アルプス周辺、長野市の里山をフィールドに活動するトレイルランニングクラブです。
+          </p>
+          <p>
+            和気あいあいと絶景や下山後のトレイルグルメを楽しむスタイルから、レース完走を目指すステップアップまで。それぞれのペースで、山を楽しんでいます。
+          </p>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <dl class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="p-6 rounded-2xl bg-forest-50 border border-forest-100">
+          <dt class="text-xs font-bold text-forest-600 mb-1">山行</dt>
+          <dd class="text-2xl sm:text-3xl font-black text-forest-900">月1〜2回</dd>
+        </div>
+        <div class="p-6 rounded-2xl bg-forest-50 border border-forest-100">
+          <dt class="text-xs font-bold text-forest-600 mb-1">朝練</dt>
+          <dd class="text-2xl sm:text-3xl font-black text-forest-900">土日 6:00〜</dd>
+        </div>
+        <div class="p-6 rounded-2xl bg-forest-50 border border-forest-100">
+          <dt class="text-xs font-bold text-forest-600 mb-1">参加費</dt>
+          <dd class="text-2xl sm:text-3xl font-black text-forest-900">0円</dd>
+        </div>
+        <div class="p-6 rounded-2xl bg-forest-50 border border-forest-100">
+          <dt class="text-xs font-bold text-forest-600 mb-1">エリア</dt>
+          <dd class="text-2xl sm:text-3xl font-black text-forest-900">北信・中信・東信</dd>
+        </div>
+      </dl>
+      <p class="mt-4 text-right text-sm font-medium text-forest-800">
+        ※ 参加費は「山に対する熱い気持ち（0円）」！
+      </p>
+    </div>
+  </section>
+
+  <!-- No.02 Schedule -->
+  <section id="schedule" class="py-20 sm:py-28 bg-stone-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <p class="font-display text-sm tracking-widest text-forest-600 uppercase mb-2">No.02 — Upcoming</p>
+          <h2 class="text-3xl sm:text-4xl font-black text-forest-900">これからの活動予定</h2>
+        </div>
+        <div class="flex gap-2" id="scheduleFilters">
+          <button data-filter="all" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-forest-800 text-white">すべて</button>
+          <button data-filter="朝練" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white text-stone-700 hover:bg-stone-200">朝練</button>
+          <button data-filter="山行" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-white text-stone-700 hover:bg-stone-200">山行</button>
+        </div>
+      </div>
+
+      <ol id="scheduleList" class="space-y-4">
+        <!-- Item 1 -->
+        <li data-category="朝練" class="schedule-item bg-white rounded-2xl p-6 shadow-sm border border-stone-200/80 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="flex items-center gap-6">
+            <div class="text-center min-w-[76px] py-2 px-3 rounded-xl bg-forest-50 text-forest-900">
+              <p class="font-display text-xs uppercase text-forest-600">Nov 2026</p>
+              <p class="font-display text-3xl font-bold leading-none my-1">22</p>
+              <p class="text-xs font-bold">（日）6:00〜</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-sky-100 text-sky-800">朝練</span>
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-emerald-100 text-emerald-800">初級</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-stone-900">犀川河川敷モーニングラン</h3>
+              <p class="text-sm text-stone-600 mt-1">ロード用シューズでOK。冷え込むので手袋を。</p>
+            </div>
+          </div>
+          <dl class="flex sm:items-center gap-6 text-sm border-t md:border-t-0 pt-4 md:pt-0 border-stone-100">
+            <div>
+              <dt class="text-xs text-stone-400">場所</dt>
+              <dd class="font-bold text-stone-700">長野市・犀川河川敷</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-stone-400">距離</dt>
+              <dd class="font-bold text-stone-700">約8〜12km / フラット</dd>
+            </div>
+          </dl>
+        </li>
+
+        <!-- Item 2 -->
+        <li data-category="山行" class="schedule-item bg-white rounded-2xl p-6 shadow-sm border border-stone-200/80 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="flex items-center gap-6">
+            <div class="text-center min-w-[76px] py-2 px-3 rounded-xl bg-amber-50 text-amber-900">
+              <p class="font-display text-xs uppercase text-amber-700">Nov 2026</p>
+              <p class="font-display text-3xl font-bold leading-none my-1">29</p>
+              <p class="text-xs font-bold">（日）8:00〜</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-amber-100 text-amber-800">山行</span>
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-emerald-100 text-emerald-800">初級</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-stone-900">地附山〜大峰山 里山周回</h3>
+              <p class="text-sm text-stone-600 mt-1">下山後は善光寺門前でおやき休憩。</p>
+            </div>
+          </div>
+          <dl class="flex sm:items-center gap-6 text-sm border-t md:border-t-0 pt-4 md:pt-0 border-stone-100">
+            <div>
+              <dt class="text-xs text-stone-400">場所</dt>
+              <dd class="font-bold text-stone-700">長野市里山エリア</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-stone-400">距離</dt>
+              <dd class="font-bold text-stone-700">約12km / D+700m</dd>
+            </div>
+          </dl>
+        </li>
+
+        <!-- Item 3 -->
+        <li data-category="朝練" class="schedule-item bg-white rounded-2xl p-6 shadow-sm border border-stone-200/80 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="flex items-center gap-6">
+            <div class="text-center min-w-[76px] py-2 px-3 rounded-xl bg-forest-50 text-forest-900">
+              <p class="font-display text-xs uppercase text-forest-600">Dec 2026</p>
+              <p class="font-display text-3xl font-bold leading-none my-1">06</p>
+              <p class="text-xs font-bold">（日）6:00〜</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-sky-100 text-sky-800">朝練</span>
+                <span class="px-2.5 py-0.5 text-xs font-bold rounded bg-emerald-100 text-emerald-800">初級</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-stone-900">犀川河川敷モーニングラン</h3>
+              <p class="text-sm text-stone-600 mt-1">初参加の方はこの回がおすすめです。</p>
+            </div>
+          </div>
+          <dl class="flex sm:items-center gap-6 text-sm border-t md:border-t-0 pt-4 md:pt-0 border-stone-100">
+            <div>
+              <dt class="text-xs text-stone-400">場所</dt>
+              <dd class="font-bold text-stone-700">長野市・犀川河川敷</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-stone-400">距離</dt>
+              <dd class="font-bold text-stone-700">約8〜12km / フラット</dd>
+            </div>
+          </dl>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- No.03 Journal / Reports -->
+  <section id="reports" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <p class="font-display text-sm tracking-widest text-forest-600 uppercase mb-2">No.03 — Journal</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-forest-900">活動報告</h2>
+        <p class="text-stone-600 mt-2">山行や朝練の記録。走ったれの雰囲気が伝わります。</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Report 1 -->
+        <article class="group bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col">
+          <div class="aspect-[3/2] overflow-hidden bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="紅葉の飯縄山" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center gap-2 text-xs font-bold text-forest-600 mb-2">
+              <span>2026.10.18（日）</span>
+              <span>•</span>
+              <span>飯縄山（1,917m）</span>
+            </div>
+            <h3 class="text-lg font-bold text-stone-900 mb-2">紅葉の飯縄山、山頂で11人の笑顔</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              色づき始めた飯縄山へ。登りはしっかり歩き、下りは落ち葉の上を軽やかに。山頂からは北アルプスまで一望できました。
+            </p>
+          </div>
+        </article>
+
+        <!-- Report 2 -->
+        <article class="group bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col">
+          <div class="aspect-[3/2] overflow-hidden bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="霧の戸隠古道" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center gap-2 text-xs font-bold text-forest-600 mb-2">
+              <span>2026.09.21（月）</span>
+              <span>•</span>
+              <span>戸隠・奥社参道〜古道</span>
+            </div>
+            <h3 class="text-lg font-bold text-stone-900 mb-2">霧の戸隠古道、杉並木を抜けて</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              樹齢400年の杉並木から始まる戸隠古道ラン。霧に包まれた森の中、静かな時間を走りました。
+            </p>
+          </div>
+        </article>
+
+        <!-- Report 3 -->
+        <article class="group bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 flex flex-col">
+          <div class="aspect-[3/2] overflow-hidden bg-stone-200">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="下山後のそば屋めぐり" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center gap-2 text-xs font-bold text-forest-600 mb-2">
+              <span>2026.08.30（日）</span>
+              <span>•</span>
+              <span>長野市里山〜鬼無里</span>
+            </div>
+            <h3 class="text-lg font-bold text-stone-900 mb-2">トレイルグルメ部、下山後のそば屋めぐり</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              走ったあとのお楽しみ。里山を軽めに走り、地元のそば屋さんへ。走ったれ名物のグルメ回です。
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- No.04 Fields -->
+  <section id="fields" class="py-20 sm:py-28 bg-forest-900 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <p class="font-display text-sm tracking-widest text-amber-400 uppercase mb-2">No.04 — Fields</p>
+      <h2 class="text-3xl sm:text-4xl font-black mb-10">主な活動フィールド</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end p-6 group">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="長野市里山トレイル" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded bg-emerald-500 text-forest-900 mb-2">初級</span>
+            <h3 class="text-2xl font-bold mb-1">長野市里山トレイル</h3>
+            <p class="text-sm text-stone-200">地附山・大峰山・葛山など</p>
+            <p class="text-xs font-display tracking-wider text-amber-300 mt-2">約12km / D+700m</p>
+          </div>
+        </article>
+
+        <article class="relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end p-6 group">
+          <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" alt="北アルプス・信州山岳" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded bg-amber-500 text-forest-900 mb-2">中級</span>
+            <h3 class="text-2xl font-bold mb-1">北アルプス・信州山岳</h3>
+            <p class="text-sm text-stone-200">北信・中信・東信の山域</p>
+            <p class="text-xs font-display tracking-wider text-amber-300 mt-2">約18〜25km / 絶景＆グルメ</p>
+          </div>
+        </article>
+
+        <article class="relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end p-6 group">
+          <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80" alt="犀川河川敷モーニング" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="inline-block px-2.5 py-0.5 text-xs font-bold rounded bg-emerald-500 text-forest-900 mb-2">初級</span>
+            <h3 class="text-2xl font-bold mb-1">犀川河川敷モーニング</h3>
+            <p class="text-sm text-stone-200">長野市・犀川河川敷</p>
+            <p class="text-xs font-display tracking-wider text-amber-300 mt-2">土日 朝6:00〜 基礎練</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- No.05 Members -->
+  <section id="members" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-10">
+        <p class="font-display text-sm tracking-widest text-forest-600 uppercase mb-2">No.05 — Members</p>
+        <h2 class="text-3xl sm:text-4xl font-black text-forest-900">一緒に走る仲間たち</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="p-7 rounded-2xl bg-stone-50 border border-stone-200/80">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-full bg-forest-800 text-white font-black text-lg flex items-center justify-center">ケ</div>
+            <span class="font-display text-2xl font-bold text-stone-300">01</span>
+          </div>
+          <p class="text-xs font-bold text-forest-600">代表</p>
+          <h3 class="text-xl font-black text-stone-900 mt-0.5 mb-3">ケン</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-5">
+            「山を走る楽しさを、仲間と分かち合いたい。初心者の方こそ大歓迎です。」
+          </p>
+          <dl class="grid grid-cols-3 gap-2 pt-4 border-t border-stone-200 text-xs">
+            <div><dt class="text-stone-400">入会</dt><dd class="font-bold mt-0.5">2021年</dd></div>
+            <div><dt class="text-stone-400">拠点</dt><dd class="font-bold mt-0.5">長野市</dd></div>
+            <div><dt class="text-stone-400">好きな山</dt><dd class="font-bold mt-0.5">飯縄山</dd></div>
+          </dl>
+        </article>
+
+        <article class="p-7 rounded-2xl bg-stone-50 border border-stone-200/80">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-full bg-forest-600 text-white font-black text-lg flex items-center justify-center">ミ</div>
+            <span class="font-display text-2xl font-bold text-stone-300">02</span>
+          </div>
+          <p class="text-xs font-bold text-forest-600">朝練リーダー</p>
+          <h3 class="text-xl font-black text-stone-900 mt-0.5 mb-3">ミホ</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-5">
+            「朝6時の河川敷は空気が最高。ゆっくりペースで一緒に走りましょう。」
+          </p>
+          <dl class="grid grid-cols-3 gap-2 pt-4 border-t border-stone-200 text-xs">
+            <div><dt class="text-stone-400">入会</dt><dd class="font-bold mt-0.5">2022年</dd></div>
+            <div><dt class="text-stone-400">拠点</dt><dd class="font-bold mt-0.5">長野市</dd></div>
+            <div><dt class="text-stone-400">好きな山</dt><dd class="font-bold mt-0.5">犀川河川敷</dd></div>
+          </dl>
+        </article>
+
+        <article class="p-7 rounded-2xl bg-stone-50 border border-stone-200/80">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-full bg-amber-600 text-white font-black text-lg flex items-center justify-center">タ</div>
+            <span class="font-display text-2xl font-bold text-stone-300">03</span>
+          </div>
+          <p class="text-xs font-bold text-forest-600">山行リーダー</p>
+          <h3 class="text-xl font-black text-stone-900 mt-0.5 mb-3">タカ</h3>
+          <p class="text-sm text-stone-600 leading-relaxed mb-5">
+            「安全第一でステップアップ。レース完走のお手伝いをします。」
+          </p>
+          <dl class="grid grid-cols-3 gap-2 pt-4 border-t border-stone-200 text-xs">
+            <div><dt class="text-stone-400">入会</dt><dd class="font-bold mt-0.5">2021年</dd></div>
+            <div><dt class="text-stone-400">拠点</dt><dd class="font-bold mt-0.5">千曲市</dd></div>
+            <div><dt class="text-stone-400">好きな山</dt><dd class="font-bold mt-0.5">白馬三山</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- No.06 Gear Checklist -->
+  <section id="gear" class="py-20 sm:py-24 bg-stone-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <p class="font-display text-sm tracking-widest text-forest-600 uppercase mb-2">No.06 — Gear Checklist</p>
+        <h2 class="text-3xl font-black text-forest-900">基本の持ち物・装備チェック</h2>
+        <p class="text-sm text-stone-600 mt-2">山行参加前にチェックボックスで確認できます。</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-stone-200 grid sm:grid-cols-2 gap-4 text-sm">
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">トレランシューズ（朝練はロード用でOK）</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">ランニングザック（5L〜12L程度）</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">水分（1L以上・季節に応じて調整）</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">レインウェア・防寒着</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">行動食（ジェル・おにぎり・お菓子など）</span>
+        </label>
+        <label class="flex items-center gap-3 p-3 rounded-xl hover:bg-stone-50 cursor-pointer">
+          <input type="checkbox" class="w-5 h-5 accent-forest-600 rounded" />
+          <span class="font-medium">熊鈴・エマージェンシーキット</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us CTA -->
+  <section id="join" class="py-20 sm:py-28 bg-forest-800 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <p class="font-display text-sm tracking-widest text-amber-400 uppercase mb-3">Join us</p>
+      <h2 class="text-3xl sm:text-5xl font-black leading-tight mb-6">
+        山に対する熱い気持ちを持って、<br />一緒に走ったれ！
+      </h2>
+      <p class="text-stone-200 max-w-xl mx-auto leading-relaxed mb-8">
+        まずは週末朝の犀川河川敷ランから。初参加の連絡、次回開催日の確認、質問など、お気軽にどうぞ。
+      </p>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-xs font-bold text-amber-300 mb-8">
+        <span>初級</span>
+        <span>•</span>
+        <span>初心者の方も大歓迎です</span>
+      </div>
+
+      <!-- Simple Interactive Contact Form -->
+      <form id="joinForm" class="max-w-lg mx-auto bg-white text-stone-800 rounded-2xl p-6 sm:p-8 text-left shadow-xl space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-stone-600 mb-1">お名前（ニックネーム可）</label>
+          <input type="text" required placeholder="例：ゆう" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-forest-600 text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-stone-600 mb-1">参加希望のメニュー</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-forest-600 text-sm">
+            <option>犀川河川敷モーニングラン（朝練）</option>
+            <option>長野市里山トレイル（初級山行）</option>
+            <option>まずは質問・相談したい</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-stone-600 mb-1">メッセージ・走力など</label>
+          <textarea rows="3" placeholder="ロードは10kmほど走っています。初参加希望です！" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:outline-none focus:border-forest-600 text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-forest-900 font-black text-sm transition">
+          体験参加・お問い合わせを送る
+        </button>
+        <p id="formMessage" class="hidden text-center text-xs font-bold text-forest-600 pt-2">
+          ※ デモ画面のため送信は完了扱いです。実際の運用時はGoogleフォームのURLなどに差し替えてください。
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest-900 text-stone-300 py-14 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-display text-sm tracking-widest text-amber-400 uppercase">Hashittare</p>
+        <p class="text-lg font-black text-white mt-1 mb-3">トレランクラブ【走ったれ】</p>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          長野県北信・中信・東信、北アルプス周辺、長野市の里山をフィールドに活動するトレイルランニングクラブ。
+        </p>
+      </div>
+      <div>
+        <p class="font-display text-xs tracking-widest uppercase text-stone-400 mb-3">Menu</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-white">走ったれとは</a></li>
+          <li><a href="#schedule" class="hover:text-white">活動予定</a></li>
+          <li><a href="#reports" class="hover:text-white">活動報告</a></li>
+          <li><a href="#members" class="hover:text-white">メンバー</a></li>
+          <li><a href="#gear" class="hover:text-white">装備</a></li>
+          <li><a href="#join" class="hover:text-white">体験参加・お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-display text-xs tracking-widest uppercase text-stone-400 mb-3">Follow</p>
+        <ul class="space-y-2 text-sm mb-4">
+          <li><a href="https://instagram.com/" target="_blank" rel="noreferrer" class="hover:text-white">Instagram</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noreferrer" class="hover:text-white">X (Twitter)</a></li>
+        </ul>
+        <p class="text-xs font-bold text-amber-400">参加費：山に対する熱い気持ち（0円）</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between text-xs text-stone-500 gap-2">
+      <span>© 2026 トレランクラブ【走ったれ】</span>
+      <span>Shinshu / Nagano Trail Running Club</span>
+    </div>
+  </footer>
+
+  <script>
+    // モバイルメニュー開閉
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 活動予定のカテゴリー絞り込み
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const scheduleItems = document.querySelectorAll('.schedule-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-forest-800', 'text-white');
+          b.classList.add('bg-white', 'text-stone-700');
+        });
+        btn.classList.remove('bg-white', 'text-stone-700');
+        btn.classList.add('bg-forest-800', 'text-white');
+
+        scheduleItems.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // フォーム送信デモ
+    document.getElementById('joinForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('formMessage').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
